@@ -21,7 +21,7 @@ if __C.DATASET == 'GCC':# only for GCC
 	__C.VAL_MODE = cfg_data.VAL_MODE 
 
 __C.NET = 'SCAR' # net selection: MCNN, VGG, VGG_DECODER
-__C.USE_CCAUGMENTAATION = True
+__C.USE_CCAUGMENTATION = True
 
 __C.PRE_GCC = False # use the pretrained model on GCC dataset
 __C.PRE_GCC_MODEL = '' # path to model

@@ -46,7 +46,7 @@ elif data_mode is 'UCSD':
     from datasets.UCSD.setting import cfg_data 
 
 # CCAugmentation
-aug_mode = cfg.USE_CCAUGMENTAATION
+aug_mode = cfg.USE_CCAUGMENTATION
 if aug_mode is True:
     from load_data import loading_data
     
