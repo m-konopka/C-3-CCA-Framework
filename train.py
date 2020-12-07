@@ -45,10 +45,14 @@ elif data_mode is 'UCSD':
     from datasets.UCSD.loading_data import loading_data
     from datasets.UCSD.setting import cfg_data 
 
-
+# CCAugmentation
+aug_mode = cfg.USE_CCAUGMENTAATION
+if aug_mode is True:
+    from load_data import loading_data
+    
 #------------Prepare Trainer------------
 net = cfg.NET
-if net in ['MCNN', 'AlexNet', 'VGG', 'VGG_DECODER', 'Res50', 'Res101', 'CSRNet','Res101_SFCN']:
+if net in ['MCNN', 'AlexNet', 'VGG', 'VGG_DECODER', 'Res50', 'Res101', 'CSRNet','Res101_SFCN','SCAR']:
     from trainer import Trainer
 elif net in ['SANet']: 
     from trainer_for_M2TCC import Trainer # double losses but signle output

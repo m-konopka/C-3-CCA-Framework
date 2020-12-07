@@ -133,8 +133,8 @@ class Trainer():
                     losses.update(self.net.loss.item())
                     maes.update(abs(gt_count-pred_cnt))
                     mses.update((gt_count-pred_cnt)*(gt_count-pred_cnt))
-                if vi==0:
-                    vis_results(self.exp_name, self.epoch, self.writer, self.restore_transform, img, pred_map, gt_map)
+#                 if vi==0:
+#                     vis_results(self.exp_name, self.epoch, self.writer, self.restore_transform, img, pred_map, gt_map)
             
         mae = maes.avg
         mse = np.sqrt(mses.avg)
